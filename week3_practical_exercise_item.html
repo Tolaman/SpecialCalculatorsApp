@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="prg_exercise1.css" rel="stylesheet" type="text/css" >
+        <title>Document</title>
+        <style>
+            .cell_phone {
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: row;
+            }
+            .calculators {
+                width: 200px;
+                height: 308px;
+                margin: auto;
+                border-radius: 5px;
+                margin-top: 60px;
+                background-color: rgb(171, 171, 171);
+                box-shadow: -5px 5px 15px 0px rgba(0, 0, 0, 0.516);
+                text-align: center;
+            }
+            .calculators h3 {
+                color: black;
+                background-color: rgb(124, 214, 163);
+                font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+                font-size: 1.6em;
+                height: 50px;
+                border-radius: 5px;
+            }
+            .calculators ul li a, th{
+                color: white;
+                font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+                font-size: 1.3em;
+            }
+            .calculators ul li {
+                padding: 20px 0px 20px 0px;
+                border-bottom: 0.7px solid black;
+            }
+            .calculators ul li a:hover, span, em {
+                color: rgb(124, 214, 163);
+                font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+            }
+            .item_box {
+                background-color: rgba(255, 255, 255, 0.013);
+                box-shadow: -5px 5px 15px 0px rgba(0, 0, 0, 0.516);
+                width: 40%;
+                height: 55vh;
+                margin: auto;
+                border-radius: 5px;
+                margin-top: 60px
+            }
+            h2 {
+                color: white;
+                font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+                font-size: 2em;
+                text-align: center;
+                margin: 20px;
+            }
+            table {
+                margin: auto;
+                width: 80%;
+            }
+            input , #result, .totals{
+                border: 1px solid rgb(124, 214, 163);
+                width: 100px;
+                height: 25px;
+                border-radius: 5px;
+                padding: 3px;
+                outline: none;
+                color: white;
+                background-color: rgb(30, 30, 30);
+                font-size: 1em;
+                font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+                margin-left: 15px;
+                margin-top: 10px;
+            }
+            input[type="button"] {
+                background-color:rgb(124, 214, 163);
+                cursor: pointer;
+                transition: .3s;
+            }
+            input[type="button"]:hover {
+                color: black;
+            }
+            .totals {
+                border: none;
+            }
+            #result {
+                background-color: rgb(171, 171, 171);
+                width: 85px;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="head_case">
+                <div class="logo">
+                    <h1><a href="prg_exercise1_home.html">CalCod</a></h1>
+                    <p>Calculator for Coders</p>
+                </div>
+                <div class="menu_bar">
+                    <ul>
+                        <li><a href="prg_exercise1_home.html">Home</a></li>
+                        <li><span><a href="prg_exercise1_services.html">Services</a></span></li>
+                        <li><a href="week7_css_practical_exercises2_aboutme.html">About me</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <div class="cell_phone">
+            <section class="calculators">
+                <h3>Calculators</h3>
+                <ul>
+                    <li><a href="week4_exercise_cellphone.html">Cell Phone Plan</a></li>
+                    <li><a href="week4_exercise_Mortgage.html">Mortgage (Bond)</a></li>
+                    <li><a href="week4_exercise_investment.html">Investment</a></li>
+                    <li><a href="week3_practical_exercise_item.html"><span>Item</span></a></li>
+                </ul>
+            </section>
+        
+            <section class="item_box">
+                <h2>Item Calculator</h2>
+                <table>
+                    <tr>
+                        <th>Item Code</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="text" id="item" value="X00X">
+                            <input type="text" id="item" value="Z22Z">
+                            <input type="text" id="item" value="Y55Y">
+                            <input type="text" id="item" value="K99K">
+                            <input type="button" value="Calculate" onclick="Calculate()">
+                        </td>
+                        <td>
+                            <input type="text" class="price" value="" placeholder="0000">
+                            <input type="text" class="price" value="" placeholder="0000">
+                            <input type="text" class="price" value="" placeholder="0000">
+                            <input type="text" class="price" value="" placeholder="0000">
+                            <div class="totals"><em>Total Cost:</em></div>
+                        </td>
+                        <td>
+                            <input type="number" class="quantity" value="" placeholder="0">
+                            <input type="number" class="quantity" value="" placeholder="0">
+                            <input type="number" class="quantity" value="" placeholder="0">
+                            <input type="number" class="quantity" value="" placeholder="0">
+                            <div id="result">0000</div>
+                        </td>
+                    </tr>
+                </table>
+            </section>
+        </div>
+        <script>
+            function Calculate() {
+                let calculator = [];
+                let priceElement = document.getElementsByClassName("price");
+                let quantityElement = document.getElementsByClassName("quantity");
+
+                for (let i = 0; i <= 3; i++) {
+                    let price = parseInt(priceElement[i].value);
+                    let quantity = parseInt(quantityElement[i].value);
+                    let subTotal = price * quantity;
+
+                    calculator.push(subTotal);
+                };
+
+                let total = calculator.reduce((sum, subtotal) => sum + subtotal, 0);
+
+                document.getElementById("result").innerHTML = total;
+            }
+        </script>
+        <div class="footer">
+            <footer>
+                <div class="copyright">
+                    <p>
+                        © 2023 - 2024 copyright. All rights reserved
+                    </p>
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>

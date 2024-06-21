@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="prg_exercise1.css" rel="stylesheet" type="text/css" >
+        <title>Document</title>
+        <style>
+            .cell_phone {
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: row;
+            }
+            .calculators {
+                width: 200px;
+                height: 308px;
+                margin: auto;
+                border-radius: 5px;
+                margin-top: 60px;
+                background-color: rgb(171, 171, 171);
+                box-shadow: -5px 5px 15px 0px rgba(0, 0, 0, 0.516);
+                text-align: center;
+            }
+            .calculators h3 {
+                color: black;
+                background-color: rgb(124, 214, 163);
+                font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+                font-size: 1.6em;
+                height: 50px;
+                border-radius: 5px;
+            }
+            .calculators ul li a{
+                color: white;
+                font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+                font-size: 1.3em;
+            }
+            .calculators ul li {
+                padding: 20px 0px 20px 0px;
+                border-bottom: 0.7px solid black;
+            }
+            .calculators ul li a:hover, span, em {
+                color: rgb(124, 214, 163);
+            }
+            .investment_box {
+                background-color: rgba(255, 255, 255, 0.013);
+                box-shadow: -5px 5px 15px 0px rgba(0, 0, 0, 0.516);
+                width: 40%;
+                height: 55vh;
+                margin: auto;
+                border-radius: 5px;
+                margin-top: 60px;
+            }
+            h2 {
+                color: white;
+                font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+                font-size: 2em;
+                text-align: center;
+                margin: 20px;
+            }
+            table {
+                margin: auto;
+            }
+            label {
+                color: white;
+                font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+                font-size: 1.2em;
+            }
+            input , #result{
+                border: 1px solid rgb(124, 214, 163);
+                height: 25px;
+                border-radius: 5px;
+                padding: 3px;
+                outline: none;
+                color: white;
+                background-color: rgb(30, 30, 30);
+                font-size: 1em;
+                font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+                margin-right: 5px;
+            }
+            input[type="number"] {
+                width: 72px;
+                
+            }
+            input[type="button"] {
+                background-color:rgb(124, 214, 163);
+                cursor: pointer;
+                transition: .3s;
+                border: none;
+                width: 170px;
+            }
+            input[type="number"], input[type="button"]{
+                margin-top: 10px;
+                margin-bottom: 20px;
+            }
+            input[type="button"]:hover {
+                color: black;
+            }
+            #result {
+                width: 164px;
+                background-color: rgb(171, 171, 171);
+                border: none;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="head_case">
+                <div class="logo">
+                    <h1><a href="prg_exercise1_home.html">CalCod</a></h1>
+                    <p>Calculator for Coders</p>
+                </div>
+                <div class="menu_bar">
+                    <ul>
+                        <li><a href="prg_exercise1_home.html">Home</a></li>
+                        <li><span><a href="prg_exercise1_services.html">Services</a></span></li>
+                        <li><a href="week7_css_practical_exercises2_aboutme.html">About me</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <div class="cell_phone">
+            <section class="calculators">
+                <h3>Calculators</h3>
+                <ul>
+                    <li><a href="week4_exercise_cellphone.html">Cell Phone Plan</a></li>
+                    <li><a href="week4_exercise_Mortgage.html">Mortgage (Bond)</a></li>
+                    <li><a href="week4_exercise_investment.html"><span>Investment</span></a></li>
+                    <li><a href="week3_practical_exercise_item.html">Item</a></li>
+                </ul>
+            </section>
+        
+            <section class="investment_box">
+                <h2>Investment Calculator</h2>
+                <table>
+                    <tr>
+                        <td><label for="purchase_price">Starting Balance:</label></td>
+                        <td><input type="text" id="balance" value="" placeholder = "Enter the amount"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="payment">Interest Rate:</label></td>
+                        <td>
+                            <input type="number" id="interest_rate" value="" placeholder="%">
+                            <input type="number" id="interest_time" value="" placeholder="yearly">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><input type="button" value="Calculate" onclick="Calculate()"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="totals"><em>Total Interest:</em></label></td>
+                        <td><div id="result">0000</div></td>
+                    </tr>
+                </table>
+            </section>
+        </div>
+        <script>
+            function Calculate() {
+                calculator = [];
+
+                calculator[0] = parseInt(document.getElementById("balance").value);
+                calculator[1] = parseInt(document.getElementById("interest_rate").value);
+                calculator[2] = parseInt(document.getElementById("interest_time").value);
+
+                calculator[1,2] = 0;
+
+                calculator[1] = calculator[1] / 100;
+                calculator[3] = calculator[0] * (1 + (calculator[1] * 4));
+
+                document.getElementById("result").innerHTML = Math.round(calculator[3]);
+            }
+        </script>
+        <div class="footer">
+            <footer>
+                <div class="copyright">
+                    <p>
+                        © 2023 - 2024 copyright. All rights reserved
+                    </p>
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>

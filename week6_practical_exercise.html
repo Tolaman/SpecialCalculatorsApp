@@ -1,0 +1,173 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <link href="prg_exercise1.css" rel="stylesheet" type="text/css" >
+        <title>My Form</title> 
+        <style>
+            /* properties for the form to be formatted: */
+            section {
+                background-color: rgba(255, 255, 255, 0.013);
+                box-shadow: -5px 5px 15px 0px rgba(0, 0, 0, 0.516);
+                width: 50%;
+                height: 55vh;
+                margin: auto;
+                border-radius: 5px;
+                margin-top: 60px
+            }
+            .my-form{
+                height: 70vh;
+            }
+            h2 {
+                color: white;
+                font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                font-size: 2em;
+                text-align: center;
+                margin: 20px;
+            }
+            table {
+                margin: auto;
+                width: 100%;
+                margin: 20px;
+            }
+            label {
+                color: white;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                font-size: 1.2em;
+            }
+            td {
+                padding: 2px;
+            }
+            /*Apply CSS to the input*/
+            input, textarea {
+                border: 1px solid rgb(124, 214, 163);
+                border-radius: 5px;
+                outline: none;
+                color: white;
+                background-color: rgb(30, 30, 30);
+                font-size: 1em;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            }
+            input[type=text] {
+                height: 30px;
+            }
+            input[type=number] {
+                width: 90px;
+            }
+            span {
+                color: rgb(124, 214, 163);
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            }
+            input[type=text], textarea { 
+                width: 80%;
+            }
+            input[type=button]{
+                margin: auto;
+                background-color: rgb(124, 214, 163);
+                cursor: pointer;
+                transition: .3s;
+                border: none;
+                height: 30px;
+                width: 100%;
+            }
+            input[type=button]:hover{
+                color: black;
+            }
+        </style> 
+    </head>
+    <body>
+
+        <header>
+            <div class="head_case">
+                <div class="logo">
+                    <h1><a href="prg_exercise1_home.html">CalCod</a></h1>
+                    <p>Calculator for Coders</p>
+                </div>
+                <div class="menu_bar">
+                    <ul>
+                        <li><a href="prg_exercise1_home.html">Home</a></li>
+                        <li><span><a href="prg_exercise1_services.html">Services</a></span></li>
+                        <li><a href="week7_css_practical_exercises2_aboutme.html">About me</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+        <div class="my-form">
+            <section>
+                <h2>Children's Party Request Form</h2>
+                <form action="submit-form.php" method="POST">
+                    <table>
+                        <tr>
+                            <td>
+                                <label for="party-theme">Party theme:</label>
+                            </td>
+                            <td>
+                                <input type="text" id="party-theme" name="party-theme"> 
+                            </td> 
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="party-date">Date:</label>
+                            </td>
+                            <td>
+                                <input type="date" id="party-date" name="party-date" required> 
+                            </td> 
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="party-time">Time:</label>
+                            </td>
+                            <td>
+                                <input type="time" id="party-time" name="party-time" required> 
+                            </td> 
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="party-guests">Amount of children:</label>
+                            </td>
+                            <td>
+                                <input type="number" id="party-guests" name="party-guests" required> 
+                            </td> 
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="Duration"> Duration: <label>
+                            </td> 
+                            <td>
+                                <input type="radio" name="duration" value="half_day"><span>Half day</span> 
+                                <input type="radio" name="duration" value="full_day"><span>Full day</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label>Main Colour:</label>
+                            </td>
+                            <td>
+                                <input type="color" name="color_choice"> <br>
+                            </td>    
+                        </tr>
+                        <tr>
+                            <td><label for="Clown"> Arrange a clown?</label></td>
+                            <td><input type="checkbox" id="Clown" name="Clown" value="Clownneeded?"></td> 
+                        </tr>
+                        <tr>
+                            <td><label for="party-extras">Additional requirements:</label></td>
+                            <td><textarea id="party-extras" name="party-extras" rows="5"></textarea> </td> 
+                        </tr>
+                    </table>
+                    <input type="button" value="Request Quote"> 
+                </form>
+            </section>
+        </div> 
+
+        <div class="footer">
+            <footer>
+                <div class="copyright">
+                    <p>
+                        © 2023 - 2024 copyright. All rights reserved
+                    </p>
+                </div>
+            </footer>
+        </div>
+    </body> 
+</html>

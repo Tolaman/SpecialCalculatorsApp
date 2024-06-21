@@ -1,0 +1,222 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+body{
+    background-color: rgb(30, 30, 30);
+    padding: 0px;
+    margin: 0px;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+
+/* HEADER
+*
+*
+*/
+
+.head_case {
+    display: flex;
+    box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.571);
+}
+.logo {
+    margin: 5px;
+    margin-left: 10px;
+}
+.logo h1 a{
+    color: rgb(124, 214, 163);
+    font-size: 2em;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.logo p {
+    color: rgb(171, 171, 171);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.menu_bar {
+    margin-top: 7vh;
+}
+.menu_bar ul {
+    display: flex;
+    margin-left: 100vh;
+}
+.menu_bar ul li a {
+    color: rgb(171, 171, 171);
+    border: 0.5px solid rgb(171, 171, 171);
+    border-radius: 5px;
+    padding: 5px;
+    margin: 7px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.menu_bar ul li a:hover {
+    color: rgb(124, 214, 163);
+    border: 0.5px solid rgb(124, 214, 163);
+}
+.menu_bar ul li span{
+    background-color: rgb(124, 214, 163);
+    border: 1px solid rgb(124, 214, 163);
+    border-radius: 5px;
+    padding: 5px;
+    margin: 7px;
+}
+.menu_bar ul li span a {
+    color: black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border: none;
+}
+.menu_bar ul li span a:hover {
+    color: black;
+    border: none;
+}
+
+/* HOME
+*
+* 
+*/
+
+.home section {
+    width: 90%;
+    text-align: left;
+    margin: auto;
+    margin-top: 20px;
+}
+.description_one article {
+    display: flex;
+}
+.home section p {
+    color : white;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.3em;
+}
+.description_one article p, .description_two article p {
+    width: 80vh;
+    margin: auto;
+}
+.description_one article .image_description_one {
+    width: 35vh;
+    height: 35vh;
+    background-image: url(IMG_3514.JPG);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 5px;
+    margin: auto;
+}
+.description_two article {
+    display: flex;
+}
+.description_two article .image_description_two {
+    width: 35vh;
+    height: 35vh;
+    background-image: url(IMG_3515.JPG);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 5px;
+    margin: auto;
+}
+/* SERVICES
+*
+* 
+*/
+
+.services {
+    text-align: center;
+}
+.services section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    width: 152vh;
+    margin: auto;
+    padding-top: 30px;
+}
+.services section a {
+    display: block;
+    box-shadow: 0px 1px 20px 0px black;
+    border-radius: 5px;
+    width: 40vh;
+    height: 22vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 5px;
+}
+.services section a:hover {
+    box-shadow: 0px 1px 5px 0px rgb(124, 214, 163);
+}
+.services section .cell_phone a {
+    background-image: url(IMG_3508.JPG) ;
+}
+.services section .mortgage a {
+    background-image: url(IMG_3509.JPG);
+}
+.services section .investment a {
+    background-image: url(IMG_3511.JPG);
+}
+.services section .item_calc a{
+    background-image: url(IMG_3585.JPG);
+}
+.services section .request_form a{
+    background-image: url(IMG_3584.JPG);
+}
+.services section .my_favorite_things a{
+    background-image: url(IMG_3581.JPG);
+}
+.services section .cell_phone, .mortgage, .investment, .item_calc, .request_form, .my_favorite_things {
+    margin: auto;
+    margin-bottom: 50px;
+}
+.services section a article {
+    background-color: rgba(171, 171, 171, 0.256);
+    width: 40vh;
+    height: 22vh;
+    border-radius: 5px;
+}
+.services section h2 {
+    color: white;
+    font-size: 1.7em;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    width: 40vh;
+    height: 5vh;
+    background-color: rgba(171, 171, 171, 0.532);
+    border-radius: 5px;
+}
+.services section h2:hover {
+    color: rgb(124, 214, 163);
+    text-shadow: 0px 1px 0px black;
+}
+.services section p{
+    margin: auto;
+    width: 40vh;
+    color: white;
+    font-size: 1.2em;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+/* FOOTER
+*
+*
+*/
+
+.footer{
+    bottom: 0px;
+    border-top: 1px solid rgb(171, 171, 171);
+    background-color: rgb(30, 30, 30);
+    width: 100%;
+    position: fixed;
+}
+.footer footer{
+    display: flex;
+}
+.copyright{
+    margin-right: 500px;
+}
+.copyright p{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1em;
+    padding-left: 40px;
+    color: white;
+}

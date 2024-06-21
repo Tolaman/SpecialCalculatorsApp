@@ -1,0 +1,145 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <link href="prg_exercise1.css" rel="stylesheet" type="text/css" >
+        <title>Styling Challenge</title> 
+        <style>
+            /* this is the second header 
+            *
+            */
+            h2 {
+                color: white;
+                font-size: 2.7em;
+                font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                text-align: center;
+                margin: 40px;
+            }
+            nav ul{
+                display: flex;
+                border: 1px solid rgb(124, 214, 163);
+                border-radius: 100px;
+                width: 50%;
+                height: 50px;
+                margin: auto;
+            }
+            nav ul li{
+                margin: auto;
+
+            }
+            nav ul li a {
+                color: white;
+                font-size: 1.5em;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+            }
+            nav ul li a:hover {
+                color: rgb(124, 214, 163);
+            }
+
+            /* Here I start to work on the section part
+            * I used i div, so i can use sections inside the div box
+            * So i put the section  next to each other by using display: flex;
+            */
+            .favorite_things {
+                display: flex;
+                margin-top: 40px;
+            }
+            .favorite_things section {
+                margin: auto;
+            }
+            .favorite_things section li {
+                list-style: solid;
+                color: white;
+                font-size: 1.2em;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                margin: 20px 0px;
+            }
+            /* I used the span to modify three specific element of the list */
+            .favorite_things section li span {
+                color: rgb(124, 214, 163);
+                font-size: 1.2em;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            }
+            h3 {
+                color: rgb(171, 171, 171);
+                font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                font-size: 2em;
+                border-bottom: 0.6px solid rgb(124, 214, 163);
+                padding-bottom: 10px;
+            }
+        </style>
+    </head>
+    <body> 
+        <!-- I know that i wrote two header, which is not very smart, but I wanted to cannect all of th e pages, but also fallow the exercise -->
+        <header>
+            <div class="head_case">
+                <div class="logo">
+                    <h1><a href="prg_exercise1_home.html">CalCod</a></h1>
+                    <p>Calculator for Coders</p>
+                </div>
+                <div class="menu_bar">
+                    <ul>
+                        <li><a href="prg_exercise1_home.html">Home</a></li>
+                        <li><span><a href="prg_exercise1_services.html">Services</a></span></li>
+                        <li><a href="week7_css_practical_exercises2_aboutme.html">About me</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <header>
+            <h2>My Favorite Things</h2> 
+            <nav>
+                <ul>
+                    <li><a href="#">Movies</a></li> 
+                    <li><a href="#">Books</a></li> 
+                    <li><a href="#">Foods</a></li>
+                </ul> 
+            </nav>
+        </header>
+        <div class="favorite_things">
+            <section> 
+                <h3>Movies</h3>
+                <ul>
+                    <li>The Shawshank Redemption</li> 
+                    <li>The Godfather</li>
+                    <li><span>The Dark Knight</span></li>
+                    <li>Forrest Gump</li>
+                    <li>The Matrix</li>
+                </ul> 
+            </section>
+            <section>
+                <h3>Books</h3> 
+                <ul>
+                    <li>To Kill a Mockingbird</li> 
+                    <li>The Catcher in the Rye</li> 
+                    <li>Pride and Prejudice</li> 
+                    <li><span>The Great Gatsby</span></li> 
+                    <li>1984</li>
+                </u>
+            </section>
+            <section>
+                <h3>Foods</h3>
+                <ul>
+                    <li><span>Pizza</span></li>
+                    <li>Burgers</li> 
+                    <li>Sushi</li> 
+                    <li>Ice Cream</li> 
+                    <li>Tacos</li>
+                </ul> 
+            </section>
+        </div>
+        <!-- This is the footer part. It's only that small line on the bottom of the page -->
+        <div class="footer">
+            <footer>
+                <div class="copyright">
+                    <p>
+                        © 2023 - 2024 copyright. All rights reserved
+                    </p>
+                </div>
+                <div class="switch_color">
+                    <p>SWITCH</p>
+                </div>
+            </footer>
+        </div>
+    </body> 
+</html>
